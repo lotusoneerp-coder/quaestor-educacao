@@ -249,28 +249,51 @@
       var lento = setTimeout(function () { situacao("Estamos conectando ao servidor; isso pode levar alguns segundos…"); }, 4000);
       var ctrl = "AbortController" in window ? new AbortController() : null;
       var limite = setTimeout(function () { if (ctrl) ctrl.abort(); }, 90000);
+      var notificar = form.getAttribute("data-notificar");
 
-      fetch(endpoint, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(corpo),
-        credentials: "omit",
-        cache: "no-store",
-        signal: ctrl ? ctrl.signal : undefined
-      }).then(function (r) {
-        return r.json().catch(function () { return {}; }).then(function (j) { return { r: r, j: j }; });
-      }).then(function (res) {
+      function postar(url, extra) {
+        return fetch(url, Object.assign({
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          cache: "no-store"
+        }, extra)).then(function (r) {
+          return r.json().catch(function () { return {}; }).then(function (j) { return { r: r, j: j }; });
+        });
+      }
+      // Aviso por e-mail à equipe (servidor do próprio site). Também cobre o caso de o Profile estar fora do ar.
+      function avisar(protocolo) {
+        if (!notificar) return Promise.resolve(false);
+        return postar(notificar, { body: JSON.stringify(Object.assign({}, corpo, { protocolo: protocolo || "" })), credentials: "same-origin" })
+          .then(function (res) { return !!(res.r.ok && res.j.ok); })
+          .catch(function () { return false; });
+      }
+      function concluir(protocolo) {
         clearTimeout(lento); clearTimeout(limite);
-        if (res.r.ok && res.j.ok) {
-          form.hidden = true;
-          if (sucesso) {
-            var p = sucesso.querySelector("[data-protocolo]");
-            if (p) p.textContent = res.j.protocolo ? "Protocolo: " + res.j.protocolo : "";
-            sucesso.hidden = false;
-            sucesso.focus();
-          }
-          return;
+        form.hidden = true;
+        if (sucesso) {
+          var p = sucesso.querySelector("[data-protocolo]");
+          if (p) p.textContent = protocolo ? "Protocolo: " + protocolo : "";
+          sucesso.hidden = false;
+          sucesso.focus();
         }
+      }
+
+      postar(endpoint, { body: JSON.stringify(corpo), credentials: "omit", signal: ctrl ? ctrl.signal : undefined })
+        .catch(function () { return { r: { ok: false, status: 0 }, j: {} }; })
+        .then(function (res) {
+        if (res.r.ok && res.j.ok) {
+          return avisar(res.j.protocolo).then(function () { concluir(res.j.protocolo); });
+        }
+        if (res.r.status === 0 || res.r.status >= 500) {
+          // Profile indisponível: o pedido segue só por e-mail; sucesso apenas se o e-mail foi aceito
+          return avisar("").then(function (ok) {
+            if (ok) { concluir(""); return; }
+            clearTimeout(lento); clearTimeout(limite);
+            ocupado(false);
+            situacao("Não foi possível enviar agora. Tente novamente em instantes ou ligue para (11) 91281-6811.", true);
+          });
+        }
+        clearTimeout(lento); clearTimeout(limite);
         ocupado(false);
         if (res.r.status === 422 && res.j.campos) {
           var primeiro = null;

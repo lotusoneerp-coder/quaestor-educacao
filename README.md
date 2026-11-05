@@ -20,6 +20,13 @@ Envia para o **Quaestor Profile**: `POST https://profile.quaestoradvisors.com.br
 `quaestoreducacao.com.br`). Contrato, antispam, retenção e integração com o ERP: `quaestor-profile/LEADS.md`.
 Se o endereço mudar, atualize o `data-endpoint` do `<form>` **e** o `connect-src` da CSP no `.htaccess`.
 
+## Aviso por e-mail (governança)
+Cada pedido também é enviado para **governanca@quaestoradvisors.com.br** por `api/notificar.php` (PHP `mail()` da
+HostGator, remetente `nao-responda@quaestoreducacao.com.br`, "Responder" vai para quem preencheu). O destino é fixo no
+script (não aceita destinatário do navegador). Mesmas validações do Profile + armadilha, tempo mínimo, origem obrigatória
+e limite de 5 envios/10 min por IP e 200/dia (contadores em `/home3/quaest62/qe-dados`, fora da pasta pública).
+Se o Profile estiver fora do ar, o pedido segue só por e-mail (sem protocolo). Permissão do PHP: `0644`.
+
 ## Neurovendas IA
 Textos dos quatro perfis vêm do método real (`quaestor-profile/qprofile/profiles.py` e `modules/neurovendas/methodology.py`
 no ERP). Não é diagnóstico psicológico nem suitability — manter o aviso se o texto mudar.
