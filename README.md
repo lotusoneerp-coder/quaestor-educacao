@@ -1,46 +1,51 @@
 # Quaestor Educação — site institucional
 
-`https://educacao.quaestoradvisors.com.br` · HTML/CSS/JS estático, sem build e sem dependências (mesma linha do front do ERP).
+`https://quaestoreducacao.com.br` · HTML/CSS/JS estático, sem build e sem dependências (mesma linha do front do ERP).
+Hospedagem: HostGator, Plano M (cPanel `br982`), domínio adicional com raiz **`/home3/quaest62/quaestoreducacao.com.br`**
+(não é a `public_html`, que pertence a `quaestorinvestimentos.com.br`).
 
 | Arquivo | O quê |
 |---|---|
-| `index.html` | Landing page: Home (narrativa), Sobre nós, Diferenciais, Soluções (abas), NR-1, Para empresas, Como funciona, Perguntas, Contato |
-| `privacidade/index.html` | Aviso de Privacidade (LGPD) do formulário — versão `2026.11` (mesma do `data-privacidade` do form) |
-| `404.html` | Página de erro (GitHub Pages usa sozinho) |
+| `index.html` | Home: narrativa, Sobre nós + Equipe, Diferenciais, Neurovendas (destaque), Soluções (abas), NR-1, Educação corporativa, Como funciona, Perguntas, Contato |
+| `neurovendas/index.html` | Neurovendas (treinamento) e Neurovendas IA (Quaestor Profile) |
+| `privacidade/index.html` | Aviso de Privacidade (LGPD) do formulário — versão `2026.11` (= `data-privacidade` do form) |
+| `404.html` | Página de erro (`ErrorDocument` no `.htaccess`) |
+| `.htaccess` | HTTPS + sem www, redirecionamentos do WordPress antigo, CSP e cabeçalhos de segurança, cache, gzip |
 | `assets/css/site.css` | Fontes auto-hospedadas + identidade (tokens em `:root`) + componentes + responsivo |
-| `assets/js/site.js` | Menu, abas, revelação ao rolar, CTAs que pré-selecionam a solução, formulário |
-| `CNAME`, `robots.txt`, `sitemap.xml`, `site.webmanifest`, `.nojekyll` | Domínio do Pages e SEO técnico |
+| `assets/js/site.js` | Menu, abas, revelação ao rolar, `?solucao=` pré-seleciona o formulário, envio do formulário |
+| `assets/img/quaestor-educacao-{branco,petroleo}.png` | Assinatura QUAESTOR EDUCAÇÃO (wordmark oficial + “EDUCAÇÃO” nas proporções do “ADVISORS”) |
 
 ## Formulário (leads)
-Envia para o **Quaestor Profile** (`data-endpoint` no `<form>`): `POST https://profile.quaestoradvisors.com.br/api/leads/educacao`.
-Contrato, antispam, retenção e integração com o ERP: `quaestor-profile/LEADS.md`. Se o endereço mudar, atualize também o
-`connect-src` do `Content-Security-Policy` no `<head>` do `index.html`.
+Envia para o **Quaestor Profile**: `POST https://profile.quaestoradvisors.com.br/api/leads/educacao` (origem autorizada:
+`quaestoreducacao.com.br`). Contrato, antispam, retenção e integração com o ERP: `quaestor-profile/LEADS.md`.
+Se o endereço mudar, atualize o `data-endpoint` do `<form>` **e** o `connect-src` da CSP no `.htaccess`.
+
+## Neurovendas IA
+Textos dos quatro perfis vêm do método real (`quaestor-profile/qprofile/profiles.py` e `modules/neurovendas/methodology.py`
+no ERP). Não é diagnóstico psicológico nem suitability — manter o aviso se o texto mudar.
+
+## Equipe — fotos
+Os cards mostram monogramas até as fotos chegarem. Para cada pessoa: WebP 800×1000 (4:5), ≤ 120 KB, em
+`assets/img/equipe/<slug>.webp` (`pedro`, `evandro-matias`, `vitor-pereira`, `lucas-neves`) e, no card
+(`data-foto="<slug>"`), troque o `<span>` do monograma por
+`<img src="/assets/img/equipe/<slug>.webp" width="800" height="1000" alt="<Nome>" loading="lazy">`.
+Não usar imagens geradas nem editar a fisionomia.
 
 ## Dados institucionais
-Endereço e telefone exibidos são os da Quaestor Advisors (Av. Ibirapuera, 2332 · (11) 91281-6811). Estão no `index.html`
-(seção `#contato`) e nas mensagens de erro de `site.js`. O telefone não está ligado a WhatsApp no site: confirme antes de
-trocar o `tel:` por `https://wa.me/5511912816811`.
-
-## Fotos e provas sociais (fase futura)
-Não há fotos de consultores, empresas atendidas, logos de clientes nem depoimentos — só podem entrar com material **real e
-autorizado** (direito de imagem/uso de marca). Para incluir:
-1. imagens em `assets/img/empresas/` (WebP, ≤ 200 KB, `width`/`height` no `<img>`, `loading="lazy"`);
-2. ativar o bloco comentado `data-slot="empresas-atendidas"` em `#empresas` do `index.html`;
-3. depoimentos: só com autorização escrita do autor; nada de resultados não comprovados.
+Endereço e telefone exibidos são os da Quaestor Advisors (Av. Ibirapuera, 2332 · (11) 91281-6811), aprovados para a
+Educação. O telefone não está ligado a WhatsApp: confirme antes de trocar o `tel:` por `https://wa.me/5511912816811`.
 
 ## Testar localmente
 ```powershell
 python -m http.server 8090 --directory "G:\Meu Drive\MANUS 2.0\quaestor-educacao"
 ```
-O envio real só funciona a partir do domínio autorizado (CORS do Profile). Para testar ponta a ponta, rode o Profile local
-com `PROFILE_LEADS_ALLOWED_ORIGINS=http://localhost:8090` e aponte `data-endpoint`/`connect-src` para ele numa cópia.
+(O `.htaccess` só vale no Apache: CSP, redirecionamentos e 404 só aparecem no servidor real.)
 
-## Publicar (GitHub Pages)
-A cópia Git fica fora do Google Drive (o Drive corrompe `.git`):
-```powershell
-robocopy "G:\Meu Drive\MANUS 2.0\quaestor-educacao" "C:\Users\Quaestor 1\Documents\quaestor-educacao" /E /XD .git
-cd "C:\Users\Quaestor 1\Documents\quaestor-educacao"; git add -A; git commit -m "..."; git push
-```
-Ao mudar CSS/JS, troque o `?v=AAAAMMDD` nas páginas (cache do navegador).
-DNS (Hostinger → Domínios → DNS): registro **CNAME** `educacao` → `lotusoneerp-coder.github.io` (não mexer em `@`, `www`,
-`profile`, MX). Depois, no GitHub: Settings → Pages → *Enforce HTTPS*.
+## Publicar (HostGator)
+1. Gere um `.zip` desta pasta **sem** `README.md` e `.gitattributes`.
+2. cPanel → Gerenciador de Arquivos → `/home3/quaest62/quaestoreducacao.com.br` → Carregar o zip → Extrair (sobrescrever).
+3. Preserve `.well-known/` (certificado) e os `google*.html` (verificação do Search Console).
+4. Ao mudar CSS/JS, troque o `?v=` nas páginas (cache de 30 dias no `.htaccess`).
+5. Confira: `https://quaestoreducacao.com.br/`, `/neurovendas/`, um envio de teste do formulário.
+
+Cópia Git (fora do Google Drive): `C:\Users\Quaestor 1\Documents\quaestor-educacao` → `github.com/lotusoneerp-coder/quaestor-educacao`.

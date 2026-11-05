@@ -1,0 +1,51 @@
+# Quaestor Educação — site estático (HostGator / Apache)
+Options -Indexes
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+
+AddType font/woff2 .woff2
+AddType application/manifest+json .webmanifest
+AddDefaultCharset utf-8
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# HTTPS e domínio sem www (a validação do certificado em /.well-known fica livre)
+RewriteCond %{REQUEST_URI} !^/\.well-known/
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^ https://quaestoreducacao.com.br%{REQUEST_URI} [L,R=301]
+
+# Endereços do site antigo (WordPress) → novas seções
+RewriteRule ^contato/?$ /#contato [NE,R=301,L]
+RewriteRule ^quem-somos/?$ /#sobre [NE,R=301,L]
+RewriteRule ^politica-de-privacidade/?$ /privacidade/ [R=301,L]
+RewriteRule ^(category|author|tag|categorias|blog|feed|os-segredos-da-mente-milionaria)(/.*)?$ / [R=301,L]
+RewriteRule ^(investir-na-bolsa|investir-no-brasil|assessor-de-investimentos|como-ganhar-mais-dinheiro-investindo-no-mercado-financeiro|juros-baixos|investimentos-melhores-que-a-poupanca|o-que-e-fgc|como-comecar-a-investir|como-organizar-a-vida-financeira-10-passos|poupanca-ou-tesouro-direto|acoes-por-que-nao-investir-em-fundo-mono|analise-fundamentalista|como-investir-em-acoes)/?$ / [R=301,L]
+RewriteRule ^como-trabalhar-no-mercado-financeiro/?$ /#solucoes [NE,R=301,L]
+RewriteRule ^(wp-admin|wp-includes|wp-content)(/.*)?$ - [G,L]
+RewriteRule ^(wp-login|xmlrpc|wp-cron|wp-config)\.php$ - [G,L]
+
+# Arquivos internos nunca são servidos
+RewriteRule (^|/)\.(git|gitattributes|htaccess) - [F,L]
+RewriteRule \.(md|sql|zip|log|bak)$ - [F,L]
+</IfModule>
+
+<IfModule mod_headers.c>
+Header always set Strict-Transport-Security "max-age=31536000"
+Header always set X-Content-Type-Options "nosniff"
+Header always set X-Frame-Options "DENY"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+Header always set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://profile.quaestoradvisors.com.br; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests"
+<FilesMatch "\.(html)$">
+Header set Cache-Control "no-cache"
+</FilesMatch>
+<FilesMatch "\.(css|js|woff2|png|webp|jpg|svg|ico)$">
+Header set Cache-Control "public, max-age=2592000"
+</FilesMatch>
+</IfModule>
+
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/css application/javascript text/javascript application/json image/svg+xml application/manifest+json text/xml application/xml
+</IfModule>

@@ -3,12 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Quaestor Educação | Treinamentos corporativos, liderança e educação financeira</title>
-<meta name="description" content="Treinamentos in company em desenvolvimento humano, liderança e gestão, educação financeira e desenvolvimento comercial. Programas personalizados para empresas, gestores e equipes. Solicite uma proposta.">
-<link rel="canonical" href="https://educacao.quaestoradvisors.com.br/">
+<title>Quaestor Educação | Treinamentos corporativos, liderança, Neurovendas e educação financeira</title>
+<meta name="description" content="Treinamentos in company em desenvolvimento humano, liderança e gestão, Neurovendas, educação financeira e desenvolvimento comercial. Programas personalizados para empresas, gestores e equipes. Solicite uma proposta.">
+<link rel="canonical" href="https://quaestoreducacao.com.br/">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#0C0C0C">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://profile.quaestoradvisors.com.br; base-uri 'self'; form-action 'self'; object-src 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 
 <meta property="og:type" content="website">
@@ -16,8 +15,8 @@
 <meta property="og:site_name" content="Quaestor Educação">
 <meta property="og:title" content="Quaestor Educação | Desenvolver pessoas. Transformar decisões. Potencializar resultados.">
 <meta property="og:description" content="Da inteligência financeira ao desenvolvimento de lideranças, experiências educacionais que impulsionam pessoas, equipes e organizações.">
-<meta property="og:url" content="https://educacao.quaestoradvisors.com.br/">
-<meta property="og:image" content="https://educacao.quaestoradvisors.com.br/assets/img/og-quaestor-educacao.png">
+<meta property="og:url" content="https://quaestoreducacao.com.br/">
+<meta property="og:image" content="https://quaestoreducacao.com.br/assets/img/og-quaestor-educacao.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Quaestor Educação — Desenvolver pessoas. Transformar decisões. Potencializar resultados.">
@@ -28,8 +27,8 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preload" href="/assets/fonts/DMSans-normal-300_700-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/InstrumentSerif-italic-400-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/site.css?v=20261105">
-<script src="/assets/js/site.js?v=20261105" defer></script>
+<link rel="stylesheet" href="/assets/css/site.css?v=20261105b">
+<script src="/assets/js/site.js?v=20261105b" defer></script>
 
 <script type="application/ld+json">
 {
@@ -37,18 +36,26 @@
   "@graph": [
     {
       "@type": "EducationalOrganization",
-      "@id": "https://educacao.quaestoradvisors.com.br/#organizacao",
+      "@id": "https://quaestoreducacao.com.br/#organizacao",
       "name": "Quaestor Educação",
-      "url": "https://educacao.quaestoradvisors.com.br/",
-      "logo": "https://educacao.quaestoradvisors.com.br/assets/img/icon-512.png",
-      "description": "Treinamentos corporativos e programas educacionais em desenvolvimento humano, liderança e gestão, educação financeira, desenvolvimento comercial e formação para o mercado financeiro.",
+      "url": "https://quaestoreducacao.com.br/",
+      "logo": "https://quaestoreducacao.com.br/assets/img/icon-512.png",
+      "description": "Educação corporativa e desenvolvimento humano: treinamentos in company em liderança, Neurovendas, educação financeira, desenvolvimento comercial e formação para o mercado financeiro.",
       "parentOrganization": {"@type": "Organization", "name": "Quaestor Advisors", "url": "https://quaestoradvisors.com.br/"},
+      "telephone": "+55-11-91281-6811",
+      "address": {"@type": "PostalAddress", "streetAddress": "Avenida Ibirapuera, 2332, 11º andar, Torre II", "addressLocality": "São Paulo", "addressRegion": "SP", "postalCode": "04028-003", "addressCountry": "BR"},
       "areaServed": {"@type": "Country", "name": "Brasil"},
-      "knowsAbout": ["Educação corporativa", "Desenvolvimento humano", "Liderança", "Educação financeira", "Treinamento de vendas", "Inteligência emocional", "Preparatório ANCORD"],
+      "member": [
+        {"@type": "Person", "name": "Evandro Matias", "jobTitle": "Fundador e CEO", "sameAs": "https://www.linkedin.com/in/evandro-matias/"},
+        {"@type": "Person", "name": "Vitor Pereira", "jobTitle": "Sócio", "sameAs": "https://www.linkedin.com/in/vitor-marques-pereira-cfp%C2%AE-b35228a2/"},
+        {"@type": "Person", "name": "Lucas Neves", "jobTitle": "Sócio", "sameAs": "https://www.linkedin.com/in/lucas-neves-38437585/"},
+        {"@type": "Person", "name": "Pedro", "jobTitle": "Consultoria e Treinamentos"}
+      ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Soluções educacionais",
         "itemListElement": [
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Neurovendas", "url": "https://quaestoreducacao.com.br/neurovendas/"}},
           {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Desenvolvimento Humano"}},
           {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Liderança e Gestão"}},
           {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Educação Financeira"}},
@@ -57,14 +64,7 @@
         ]
       }
     },
-    {
-      "@type": "WebSite",
-      "@id": "https://educacao.quaestoradvisors.com.br/#site",
-      "url": "https://educacao.quaestoradvisors.com.br/",
-      "name": "Quaestor Educação",
-      "inLanguage": "pt-BR",
-      "publisher": {"@id": "https://educacao.quaestoradvisors.com.br/#organizacao"}
-    }
+    {"@type": "WebSite", "@id": "https://quaestoreducacao.com.br/#site", "url": "https://quaestoreducacao.com.br/", "name": "Quaestor Educação", "inLanguage": "pt-BR", "publisher": {"@id": "https://quaestoreducacao.com.br/#organizacao"}}
   ]
 }
 </script>
@@ -80,14 +80,18 @@
     </a>
     <nav class="nav" id="menu" aria-label="Principal" data-menu>
       <ul>
-        <li><a href="#sobre">Sobre nós</a></li>
-        <li><a href="#solucoes">Soluções</a></li>
-        <li><a href="#empresas">Para empresas</a></li>
-        <li><a href="#como-funciona">Como funciona</a></li>
-        <li><a href="#perguntas">Perguntas</a></li>
-        <li><a href="#contato">Contato</a></li>
+        <li><a href="/#sobre">Sobre nós</a></li>
+        <li><a href="/#solucoes">Soluções</a></li>
+        <li><a href="/neurovendas/">Neurovendas</a></li>
+        <li><a href="/#empresas">Educação corporativa</a></li>
+        <li><a href="/#como-funciona">Como funciona</a></li>
+        <li><a href="/#perguntas">Perguntas</a></li>
+        <li><a href="/#contato">Contato</a></li>
       </ul>
-      <a class="btn btn--menta btn--sm nav__cta" href="#contato" data-cta>Solicitar proposta</a>
+      <div class="nav__botoes">
+        <a class="btn btn--linha btn--sm" href="https://quaestoradvisors.com.br/" target="_blank" rel="noopener">Assessoria <svg class="ext" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3h7v7M13 3 4 12"/></svg><span class="sr"> (abre o site da Quaestor Advisors)</span></a>
+        <a class="btn btn--menta btn--sm" href="/#contato">Solicitar proposta</a>
+      </div>
     </nav>
     <button class="menu-btn" type="button" aria-controls="menu" aria-expanded="false" data-menu-btn>
       <span class="sr">Abrir menu</span><i></i><i></i>
@@ -102,7 +106,7 @@
   <div class="hero__grade" aria-hidden="true"></div>
   <div class="wrap hero__in">
     <div class="hero__texto">
-      <p class="selo"><span class="ponto" aria-hidden="true"></span>Desenvolvimento humano · Educação financeira · Capacitação empresarial</p>
+      <p class="selo"><span class="ponto" aria-hidden="true"></span>Educação corporativa · Desenvolvimento humano · Inteligência financeira</p>
       <h1 id="hero-titulo">
         <span class="linha">Desenvolver pessoas.</span>
         <span class="linha"><em>Transformar</em> decisões.</span>
@@ -110,7 +114,7 @@
       </h1>
       <p class="hero__sub">Da inteligência financeira ao desenvolvimento de lideranças, criamos experiências educacionais que impulsionam pessoas, equipes e organizações.</p>
       <div class="acoes">
-        <a class="btn btn--menta" href="#contato" data-cta>Solicitar proposta <svg class="seta" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11m-4-5 5 5-5 5"/></svg></a>
+        <a class="btn btn--menta" href="#contato">Solicitar proposta <svg class="seta" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11m-4-5 5 5-5 5"/></svg></a>
         <a class="btn btn--linha" href="#solucoes">Conhecer soluções</a>
       </div>
     </div>
@@ -127,13 +131,13 @@
     <ul class="faixa">
       <li><b>In company</b> workshops na sua empresa</li>
       <li><b>Sob medida</b> briefing com gestores e RH</li>
-      <li><b>Aplicado</b> cases e dinâmicas interativas</li>
+      <li><b>Neurovendas</b> comunicação comercial estratégica</li>
       <li><b>Proposta</b> personalizada por escopo</li>
     </ul>
   </div>
 </section>
 
-<!-- ============================== SOBRE / NARRATIVA -->
+<!-- ============================== SOBRE NÓS -->
 <section class="secao secao--clara" id="sobre" aria-labelledby="sobre-titulo">
   <div class="wrap">
     <div class="narrativa">
@@ -183,6 +187,46 @@
         <p>Ser reconhecida pelas empresas como parceira de desenvolvimento que une a disciplina do mercado financeiro ao cuidado com as pessoas.</p>
       </div>
     </div>
+
+    <div class="equipe" id="equipe">
+      <div class="cab revela">
+        <p class="rotulo">Equipe</p>
+        <h2>Quem conduz a <em>Quaestor Educação</em>.</h2>
+      </div>
+      <ul class="pessoas">
+        <li class="pessoa revela">
+          <div class="pessoa__foto" data-foto="pedro"><span aria-hidden="true">P</span></div>
+          <div class="pessoa__info">
+            <h3>Pedro</h3>
+            <p>Consultoria e Treinamentos</p>
+          </div>
+        </li>
+        <li class="pessoa revela">
+          <div class="pessoa__foto" data-foto="evandro-matias"><span aria-hidden="true">EM</span></div>
+          <div class="pessoa__info">
+            <h3>Evandro Matias</h3>
+            <p>Fundador e CEO</p>
+            <a class="in" href="https://www.linkedin.com/in/evandro-matias/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4v11H3zM9.5 9.75h3.8v1.6h.06c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.77 2.6 4.77 6v5.45h-4v-4.83c0-1.15-.02-2.63-1.6-2.63-1.61 0-1.86 1.25-1.86 2.55v4.91h-4z"/></svg>LinkedIn<span class="sr"> de Evandro Matias</span></a>
+          </div>
+        </li>
+        <li class="pessoa revela">
+          <div class="pessoa__foto" data-foto="vitor-pereira"><span aria-hidden="true">VP</span></div>
+          <div class="pessoa__info">
+            <h3>Vitor Pereira</h3>
+            <p>Sócio</p>
+            <a class="in" href="https://www.linkedin.com/in/vitor-marques-pereira-cfp%C2%AE-b35228a2/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4v11H3zM9.5 9.75h3.8v1.6h.06c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.77 2.6 4.77 6v5.45h-4v-4.83c0-1.15-.02-2.63-1.6-2.63-1.61 0-1.86 1.25-1.86 2.55v4.91h-4z"/></svg>LinkedIn<span class="sr"> de Vitor Pereira</span></a>
+          </div>
+        </li>
+        <li class="pessoa revela">
+          <div class="pessoa__foto" data-foto="lucas-neves"><span aria-hidden="true">LN</span></div>
+          <div class="pessoa__info">
+            <h3>Lucas Neves</h3>
+            <p>Sócio</p>
+            <a class="in" href="https://www.linkedin.com/in/lucas-neves-38437585/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4v11H3zM9.5 9.75h3.8v1.6h.06c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.77 2.6 4.77 6v5.45h-4v-4.83c0-1.15-.02-2.63-1.6-2.63-1.61 0-1.86 1.25-1.86 2.55v4.91h-4z"/></svg>LinkedIn<span class="sr"> de Lucas Neves</span></a>
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
 </section>
 
@@ -216,9 +260,9 @@
         <p>Material didático, resolução de cases e dinâmicas interativas no lugar de palestras apenas expositivas.</p>
       </li>
       <li class="card revela">
-        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V8l8-5 8 5v13"/><path d="M9 21v-6h6v6"/></svg>
-        <h3>Formato in company</h3>
-        <p>O treinamento acontece no ambiente da equipe, com complemento online quando fizer sentido.</p>
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"/><path d="M8 12.5c1 1.5 2.4 2.3 4 2.3s3-.8 4-2.3M9 9h.01M15 9h.01"/></svg>
+        <h3>Comportamento no centro</h3>
+        <p>Com o Neurovendas, a comunicação parte da compreensão das pessoas — e não de roteiros genéricos.</p>
       </li>
       <li class="card revela">
         <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14v16H5z"/><path d="M9 9h6M9 13h6M9 17h3"/></svg>
@@ -229,13 +273,50 @@
   </div>
 </section>
 
+<!-- ============================== NEUROVENDAS (destaque) -->
+<section class="secao nv-home" id="neurovendas" aria-labelledby="nv-titulo">
+  <div class="wrap">
+    <div class="nv-home__in">
+      <div class="revela">
+        <p class="rotulo">Solução em destaque · Neurovendas</p>
+        <h2 id="nv-titulo">Venda melhor quando você aprende a <em>compreender pessoas</em>.</h2>
+        <p class="nv-home__lead">Desenvolvemos profissionais comerciais capazes de compreender comportamentos, identificar necessidades e construir relações de confiança por meio de uma comunicação mais estratégica.</p>
+        <ul class="nv-blocos">
+          <li><b>Comportamento e comunicação</b><span>Tendências comportamentais, motivações e comunicação adaptativa.</span></li>
+          <li><b>Prospecção consultiva</b><span>Abrir conversas, despertar interesse e fazer as perguntas certas.</span></li>
+          <li><b>Tratamento de objeções</b><span>Responder ao “não tenho tempo” ou ao “preciso pensar” com escuta e clareza.</span></li>
+          <li><b>Aplicação prática</b><span>Simulações, WhatsApp, ligações, follow-up e roteiros personalizados.</span></li>
+        </ul>
+        <div class="acoes">
+          <a class="btn btn--menta" href="/neurovendas/">Conhecer o Neurovendas <svg class="seta" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11m-4-5 5 5-5 5"/></svg></a>
+          <a class="btn btn--linha" href="/?solucao=neurovendas#contato">Solicitar proposta</a>
+        </div>
+      </div>
+      <div class="nv-home__lado revela">
+        <p class="mini">Metodologia de prospecção</p>
+        <ol class="fluxo">
+          <li>Permissão</li><li>Contexto</li><li>Prioridade</li><li>Impacto</li><li>Oportunidade</li><li>Próximo passo</li>
+        </ol>
+        <div class="nv-ia">
+          <p class="mini">Neurovendas IA · Quaestor Profile</p>
+          <p>Diagnóstico comportamental de 10 perguntas que indica as preferências de comunicação do cliente entre quatro perfis.</p>
+          <ul class="cores" aria-label="Perfis do Neurovendas IA">
+            <li class="cor cor--verde">Verde</li><li class="cor cor--vermelho">Vermelho</li><li class="cor cor--azul">Azul</li><li class="cor cor--ouro">Ouro</li>
+          </ul>
+          <a class="link-seta" href="/neurovendas/#ia">Conhecer o Neurovendas IA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============================== SOLUÇÕES -->
 <section class="secao secao--escura" id="solucoes" aria-labelledby="sol-titulo">
   <div class="wrap">
     <div class="cab cab--claro revela">
       <p class="rotulo">Soluções educacionais</p>
-      <h2 id="sol-titulo">Cinco frentes para desenvolver <em>pessoas e equipes</em>.</h2>
-      <p>Escolha uma área para ver os temas, os benefícios e para quem cada solução é indicada. Os conteúdos podem ser combinados em um mesmo programa.</p>
+      <h2 id="sol-titulo">Frentes de desenvolvimento para <em>pessoas e equipes</em>.</h2>
+      <p>Escolha uma área para ver o que é, para quem é indicada, o que será desenvolvido e os benefícios práticos. Os conteúdos podem ser combinados em um mesmo programa.</p>
     </div>
 
     <div class="abas" data-abas>
@@ -250,8 +331,9 @@
       <div class="painel" role="tabpanel" id="painel-dh" aria-labelledby="aba-dh" tabindex="0">
         <div class="painel__cab">
           <h3>Desenvolvimento Humano</h3>
-          <p>Competências comportamentais que sustentam relações de trabalho saudáveis e decisões mais conscientes.</p>
+          <div><p class="mini">O que é</p><p>Competências comportamentais que sustentam relações de trabalho saudáveis e decisões mais conscientes.</p></div>
         </div>
+        <p class="mini painel__rot">O que será desenvolvido</p>
         <ul class="temas">
           <li><strong>Inteligência emocional</strong><span>Reconhecer e administrar emoções em situações de pressão.</span></li>
           <li><strong>Pensamento crítico</strong><span>Analisar informações, questionar premissas e decidir com mais clareza.</span></li>
@@ -262,45 +344,47 @@
         </ul>
         <div class="painel__pe">
           <div><p class="mini">Benefícios práticos</p><ul class="checks"><li>Relações de trabalho mais colaborativas</li><li>Menos ruído na comunicação entre áreas</li><li>Decisões tomadas com mais consciência</li></ul></div>
-          <div><p class="mini">Para quem</p><p>Equipes de todas as áreas, profissionais em desenvolvimento e times que passam por mudanças.</p></div>
-          <a class="btn btn--menta" href="#contato" data-cta data-solucao="desenvolvimento-humano">Solicitar proposta</a>
+          <div><p class="mini">Para quem é indicada</p><p>Equipes de todas as áreas, profissionais em desenvolvimento e times que passam por mudanças.</p></div>
+          <a class="btn btn--menta" href="/?solucao=desenvolvimento-humano#contato" data-solucao="desenvolvimento-humano">Solicitar proposta</a>
         </div>
       </div>
 
       <div class="painel" role="tabpanel" id="painel-lg" aria-labelledby="aba-lg" tabindex="0" hidden>
         <div class="painel__cab">
           <h3>Liderança e Gestão</h3>
-          <p>Formação para quem conduz pessoas e precisa equilibrar resultado, clima e tomada de decisão.</p>
+          <div><p class="mini">O que é</p><p>Formação para quem conduz pessoas e precisa equilibrar resultado, clima e tomada de decisão.</p></div>
         </div>
+        <p class="mini painel__rot">O que será desenvolvido</p>
         <ul class="temas">
           <li><strong>Academia da Liderança</strong><span>Programa estruturado de desenvolvimento de líderes, organizado em módulos.</span></li>
           <li><strong>Desenvolvimento de gestores</strong><span>Fortalecer a atuação de quem já ocupa posições de gestão.</span></li>
           <li><strong>Formação de lideranças</strong><span>Preparar novos líderes para assumir equipes com segurança.</span></li>
           <li><strong>Tomada de decisão</strong><span>Métodos para decidir com critérios, dados e responsabilidade.</span></li>
-          <li><strong>Comunicação e gestão de equipes</strong><span>Alinhamento, delegação e acompanhamento do time.</span></li>
+          <li><strong>Gestão de equipes</strong><span>Comunicação, alinhamento, delegação e acompanhamento do time.</span></li>
         </ul>
         <div class="painel__pe">
           <div><p class="mini">Benefícios práticos</p><ul class="checks"><li>Líderes mais preparados para conduzir pessoas</li><li>Estratégia mais próxima da rotina das equipes</li><li>Critérios mais claros para decidir</li></ul></div>
-          <div><p class="mini">Para quem</p><p>Gestores, coordenadores, supervisores, novos líderes e sucessores.</p></div>
-          <a class="btn btn--menta" href="#contato" data-cta data-solucao="lideranca-gestao">Solicitar proposta</a>
+          <div><p class="mini">Para quem é indicada</p><p>Gestores, coordenadores, supervisores, novos líderes e sucessores.</p></div>
+          <a class="btn btn--menta" href="/?solucao=lideranca-gestao#contato" data-solucao="lideranca-gestao">Solicitar proposta</a>
         </div>
       </div>
 
       <div class="painel" role="tabpanel" id="painel-ef" aria-labelledby="aba-ef" tabindex="0" hidden>
         <div class="painel__cab">
           <h3>Educação Financeira</h3>
-          <p>A experiência da Quaestor no mercado financeiro traduzida em conhecimento prático para a vida pessoal e profissional.</p>
+          <div><p class="mini">O que é</p><p>A experiência da Quaestor no mercado financeiro traduzida em conhecimento prático para a vida pessoal e profissional.</p></div>
         </div>
+        <p class="mini painel__rot">O que será desenvolvido</p>
         <ul class="temas">
           <li><strong>Educação financeira pessoal</strong><span>Orçamento, consumo consciente e construção de reservas.</span></li>
+          <li><strong>Planejamento financeiro</strong><span>Metas, prioridades e acompanhamento ao longo do tempo.</span></li>
           <li><strong>Inteligência financeira</strong><span>Conceitos essenciais para tomar decisões financeiras melhores.</span></li>
-          <li><strong>Planejamento e organização financeira</strong><span>Metas, prioridades e acompanhamento ao longo do tempo.</span></li>
           <li><strong>Educação financeira corporativa</strong><span>Programas para colaboradores, integrados às iniciativas de desenvolvimento e bem-estar da empresa.</span></li>
         </ul>
         <div class="painel__pe">
           <div><p class="mini">Benefícios práticos</p><ul class="checks"><li>Colaboradores mais organizados em suas finanças</li><li>Conteúdo aplicável ao dia a dia</li><li>Apoio às ações de bem-estar da empresa</li></ul></div>
-          <div><p class="mini">Para quem</p><p>Colaboradores de todos os níveis, áreas de RH e programas de benefícios.</p></div>
-          <a class="btn btn--menta" href="#contato" data-cta data-solucao="educacao-financeira">Solicitar proposta</a>
+          <div><p class="mini">Para quem é indicada</p><p>Colaboradores de todos os níveis, áreas de RH e programas de benefícios.</p></div>
+          <a class="btn btn--menta" href="/?solucao=educacao-financeira#contato" data-solucao="educacao-financeira">Solicitar proposta</a>
         </div>
         <p class="aviso">Conteúdo de caráter educacional. Não constitui recomendação de investimento.</p>
       </div>
@@ -308,8 +392,9 @@
       <div class="painel" role="tabpanel" id="painel-dc" aria-labelledby="aba-dc" tabindex="0" hidden>
         <div class="painel__cab">
           <h3>Desenvolvimento Comercial</h3>
-          <p>Técnica, comunicação e método para equipes que vendem, negociam e se relacionam com clientes.</p>
+          <div><p class="mini">O que é</p><p>Técnica, comunicação e método para equipes que vendem, negociam e se relacionam com clientes.</p></div>
         </div>
+        <p class="mini painel__rot">O que será desenvolvido</p>
         <ul class="temas">
           <li><strong>Treinamento de vendas</strong><span>Abordagem, diagnóstico de necessidades e condução até o fechamento.</span></li>
           <li><strong>Comunicação comercial</strong><span>Clareza e persuasão na apresentação de soluções e propostas.</span></li>
@@ -318,53 +403,55 @@
         </ul>
         <div class="painel__pe">
           <div><p class="mini">Benefícios práticos</p><ul class="checks"><li>Abordagens comerciais mais consistentes</li><li>Negociações mais bem preparadas</li><li>Equipe alinhada em método e linguagem</li></ul></div>
-          <div><p class="mini">Para quem</p><p>Equipes comerciais, de atendimento e de relacionamento, e gestores de vendas.</p></div>
-          <a class="btn btn--menta" href="#contato" data-cta data-solucao="desenvolvimento-comercial">Solicitar proposta</a>
+          <div><p class="mini">Para quem é indicada</p><p>Equipes comerciais, de atendimento e de relacionamento, e gestores de vendas.</p></div>
+          <a class="btn btn--menta" href="/?solucao=desenvolvimento-comercial#contato" data-solucao="desenvolvimento-comercial">Solicitar proposta</a>
         </div>
+        <p class="aviso">Quer aprofundar a comunicação comercial a partir do comportamento do cliente? Conheça o <a href="/neurovendas/">Neurovendas</a>.</p>
       </div>
 
       <div class="painel" role="tabpanel" id="painel-fp" aria-labelledby="aba-fp" tabindex="0" hidden>
         <div class="painel__cab">
           <h3>Formação Profissional</h3>
-          <p>Preparação para quem deseja ingressar ou crescer no mercado financeiro.</p>
+          <div><p class="mini">O que é</p><p>Preparação para quem deseja ingressar ou crescer no mercado financeiro.</p></div>
         </div>
+        <p class="mini painel__rot">O que será desenvolvido</p>
         <ul class="temas">
-          <li><strong>Preparatório para ANCORD</strong><span>Preparação para o exame de certificação da ANCORD, voltado a quem deseja atuar como assessor de investimentos.</span></li>
+          <li><strong>Preparatório ANCORD</strong><span>Preparação para o exame de certificação da ANCORD, voltado a quem deseja atuar como assessor de investimentos.</span></li>
           <li><strong>Formação para o mercado financeiro</strong><span>Fundamentos, rotina e desenvolvimento para quem atua ou quer atuar no setor.</span></li>
         </ul>
         <div class="painel__pe">
           <div><p class="mini">Benefícios práticos</p><ul class="checks"><li>Base técnica estruturada</li><li>Conexão com a prática do mercado</li><li>Orientação para o desenvolvimento da carreira</li></ul></div>
-          <div><p class="mini">Para quem</p><p>Profissionais em transição de carreira, estudantes e equipes de escritórios e instituições financeiras.</p></div>
-          <a class="btn btn--menta" href="#contato" data-cta data-solucao="formacao-profissional">Solicitar proposta</a>
+          <div><p class="mini">Para quem é indicada</p><p>Profissionais em transição de carreira, estudantes e equipes de escritórios e instituições financeiras.</p></div>
+          <a class="btn btn--menta" href="/?solucao=formacao-profissional#contato" data-solucao="formacao-profissional">Solicitar proposta</a>
         </div>
       </div>
     </div>
 
     <aside class="nr1 revela" aria-labelledby="nr1-titulo">
       <div>
-        <p class="rotulo">Temática em destaque</p>
+        <p class="rotulo">Temática de capacitação</p>
         <h3 id="nr1-titulo">NR-1 e fatores psicossociais no trabalho</h3>
         <p>A atualização da NR-1 reforçou a atenção das empresas aos fatores de riscos psicossociais no gerenciamento de riscos ocupacionais. Oferecemos capacitações em temas relacionados — inteligência emocional, comunicação, prevenção de conflitos e liderança — que podem apoiar as ações da sua empresa nessa frente.</p>
         <p class="aviso">As capacitações complementam, mas não substituem, o Programa de Gerenciamento de Riscos (PGR) e as demais obrigações da norma. Um workshop isolado não garante conformidade normativa.</p>
       </div>
-      <a class="btn btn--linha" href="#contato" data-cta data-solucao="nr1-saude-emocional">Falar sobre NR-1</a>
+      <a class="btn btn--linha" href="/?solucao=nr1-saude-emocional#contato" data-solucao="nr1-saude-emocional">Falar sobre NR-1</a>
     </aside>
   </div>
 </section>
 
-<!-- ============================== PARA EMPRESAS -->
+<!-- ============================== EDUCAÇÃO CORPORATIVA -->
 <section class="secao secao--clara" id="empresas" aria-labelledby="emp-titulo">
   <div class="wrap">
     <div class="duas">
       <div class="cab revela">
-        <p class="rotulo">Para empresas</p>
+        <p class="rotulo">Educação corporativa</p>
         <h2 id="emp-titulo">Programas desenhados para a <em>realidade</em> da sua empresa.</h2>
         <p>Cada organização vive desafios, culturas e momentos diferentes. Por isso, as soluções da Quaestor Educação são ajustadas a partir de um briefing com quem conhece a equipe.</p>
         <ul class="tags" aria-label="Áreas que costumam nos procurar">
           <li>RH e T&amp;D</li><li>Diretoria e gestores</li><li>Áreas comerciais</li><li>Programas de bem-estar</li>
         </ul>
         <div class="acoes">
-          <a class="btn btn--escuro" href="#contato" data-cta>Conversar com um especialista</a>
+          <a class="btn btn--escuro" href="#contato">Conversar com um especialista</a>
         </div>
       </div>
       <ul class="formatos">
@@ -372,15 +459,9 @@
         <li class="formato revela"><h3>Treinamentos personalizados</h3><p>Conteúdo ajustado ao contexto, à linguagem e aos objetivos da empresa.</p></li>
         <li class="formato revela"><h3>Programas corporativos</h3><p>Trilhas com mais de um encontro, para desenvolver competências ao longo do tempo.</p></li>
         <li class="formato revela"><h3>Desenvolvimento de equipes</h3><p>Ações dedicadas a times específicos — liderança, comercial, atendimento, operação.</p></li>
-        <li class="formato revela"><h3>Complemento online</h3><p>Encontro online de até uma hora para reforçar ou aprofundar o conteúdo, quando necessário.</p></li>
+        <li class="formato revela"><h3>Complemento online</h3><p>Encontro online para reforçar ou aprofundar o conteúdo, quando necessário.</p></li>
       </ul>
     </div>
-
-    <!--
-      ESPAÇO RESERVADO — provas sociais (empresas atendidas, depoimentos, fotos de turmas).
-      Só ativar com material REAL e autorizado. Instruções em README.md ("Fotos e provas sociais").
-      <div class="provas" data-slot="empresas-atendidas" hidden></div>
-    -->
   </div>
 </section>
 
@@ -388,7 +469,7 @@
 <section class="secao" id="como-funciona" aria-labelledby="cf-titulo">
   <div class="wrap">
     <div class="cab revela">
-      <p class="rotulo">Como funciona</p>
+      <p class="rotulo">Como funcionam os treinamentos</p>
       <h2 id="cf-titulo">Do primeiro contato à <em>sala de treinamento</em>.</h2>
       <p>Um processo simples, com escuta antes da entrega.</p>
     </div>
@@ -396,31 +477,39 @@
     <ol class="etapas">
       <li class="etapa revela"><span class="etapa__n">1</span><h3>Solicitação</h3><p>Você conta o objetivo, o público e os temas de interesse pelo formulário.</p></li>
       <li class="etapa revela"><span class="etapa__n">2</span><h3>Proposta comercial</h3><p>Apresentamos escopo, formato e investimento de acordo com a necessidade.</p></li>
-      <li class="etapa revela"><span class="etapa__n">3</span><h3>Briefing</h3><p>Com a proposta avançada, reunião com gestores e/ou RH para compreender necessidades, expectativas e oportunidades de desenvolvimento.</p></li>
-      <li class="etapa revela"><span class="etapa__n">4</span><h3>Realização</h3><p>Workshop in company com material didático, resolução de cases e dinâmicas interativas.</p></li>
-      <li class="etapa revela"><span class="etapa__n">5</span><h3>Complemento</h3><p>Quando necessário, um encontro online de até uma hora para consolidar o aprendizado.</p></li>
+      <li class="etapa revela"><span class="etapa__n">3</span><h3>Briefing</h3><p>Reunião com gestores e/ou RH para identificar necessidades e levantar expectativas.</p></li>
+      <li class="etapa revela"><span class="etapa__n">4</span><h3>Execução</h3><p>Workshop presencial com material didático, resolução de cases e dinâmicas interativas.</p></li>
+      <li class="etapa revela"><span class="etapa__n">5</span><h3>Complemento</h3><p>Quando necessário, uma complementação online para consolidar o aprendizado.</p></li>
     </ol>
-    <p class="etapas__nota revela">O briefing pode envolver levantamento de percepções, questionário de anamnese, ajustes de escopo e alinhamento da infraestrutura do local.</p>
 
-    <div class="modelo">
+    <div class="modelo modelo--3">
       <div class="modelo__card revela">
-        <p class="rotulo">Modelo de workshop de referência</p>
-        <ul class="lista-modelo">
-          <li><span>Formato</span><b>1 workshop presencial</b></li>
-          <li><span>Duração</span><b>aprox. 1h30 a 2h</b></li>
-          <li><span>Local</span><b>In company</b></li>
-          <li><span>Inclui</span><b>Material didático</b></li>
-          <li><span>Método</span><b>Cases e dinâmicas interativas</b></li>
-          <li><span>Opcional</span><b>Complemento online de até 1h</b></li>
+        <p class="rotulo">Briefing</p>
+        <ul class="lista-simples">
+          <li>Reunião com gestores e/ou RH</li>
+          <li>Identificação de necessidades</li>
+          <li>Levantamento de expectativas</li>
+          <li>Questionário de anamnese, quando aplicável</li>
+          <li>Alinhamento da infraestrutura</li>
         </ul>
-        <p class="nota">Modelo de referência. Formato, duração e número de encontros são definidos com cada empresa.</p>
+      </div>
+      <div class="modelo__card revela">
+        <p class="rotulo">Execução</p>
+        <ul class="lista-simples">
+          <li>Workshop presencial</li>
+          <li>Material didático</li>
+          <li>Resolução de cases</li>
+          <li>Dinâmicas interativas</li>
+          <li>Complementação online, quando necessária</li>
+          <li>Treinamentos personalizados</li>
+        </ul>
+        <p class="nota"><b>Modelo de referência:</b> workshop presencial in company de 1h30 a 2h. O formato varia conforme o projeto.</p>
       </div>
       <div class="modelo__inv revela">
         <p class="rotulo">Investimento</p>
         <h3>Personalizado para cada projeto.</h3>
-        <p>O valor é definido conforme o número de participantes, a carga horária, o formato e o escopo. Por isso, não trabalhamos com tabela de preços: cada proposta é elaborada a partir da sua necessidade.</p>
-        <p class="nota">Como referência, as propostas têm validade de sete dias, e a infraestrutura de projeção e som costuma ficar a cargo da empresa contratante. As condições de cada contratação constam da proposta.</p>
-        <a class="btn btn--escuro" href="#contato" data-cta>Solicitar proposta <svg class="seta" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11m-4-5 5 5-5 5"/></svg></a>
+        <p>Definido de acordo com o número de participantes, a carga horária, o formato e o escopo. Não trabalhamos com tabela de preços: cada proposta é elaborada a partir da sua necessidade.</p>
+        <a class="btn btn--menta" href="#contato">Solicitar proposta <svg class="seta" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11m-4-5 5 5-5 5"/></svg></a>
       </div>
     </div>
   </div>
@@ -432,19 +521,19 @@
     <div class="cab revela">
       <p class="rotulo">Perguntas frequentes</p>
       <h2 id="faq-titulo">O que as empresas costumam <em>perguntar</em>.</h2>
-      <p>Não encontrou sua dúvida? <a href="#contato" data-cta>Fale com a nossa equipe</a>.</p>
+      <p>Não encontrou sua dúvida? <a href="#contato">Fale com a nossa equipe</a>.</p>
     </div>
     <div class="faq__lista">
       <details><summary>Para quem são os treinamentos?</summary><p>Para empresas que desejam desenvolver suas equipes — de colaboradores a líderes — e para profissionais que buscam formação para o mercado financeiro.</p></details>
       <details><summary>É possível personalizar o conteúdo?</summary><p>Sim. Temas, exemplos e dinâmicas são ajustados a partir do briefing com gestores e/ou RH, de acordo com os objetivos e a realidade da equipe.</p></details>
-      <details><summary>Os workshops acontecem dentro da empresa?</summary><p>Sim. O modelo de referência é in company, realizado no espaço da sua empresa. Em geral, a infraestrutura de projeção e som fica a cargo do contratante.</p></details>
-      <details><summary>Existem modalidades presenciais e online?</summary><p>O formato principal é presencial. Quando necessário, há um complemento online de até uma hora. Outros formatos podem ser avaliados na proposta.</p></details>
-      <details><summary>Qual a duração dos treinamentos?</summary><p>O workshop de referência dura aproximadamente de 1h30 a 2h. Programas com mais encontros ou maior carga horária são definidos conforme o escopo.</p></details>
-      <details><summary>Como funciona o briefing?</summary><p>Após o avanço da proposta comercial, fazemos uma reunião com gestores e/ou RH para entender necessidades e expectativas. Ela pode envolver levantamento de percepções, questionário de anamnese, ajustes de escopo e alinhamento da infraestrutura.</p></details>
-      <details><summary>Como solicitar uma proposta?</summary><p>Preencha o formulário desta página com o tema de interesse e o número aproximado de participantes. Nossa equipe retorna para entender o contexto e preparar a proposta.</p></details>
+      <details><summary>Quais são as modalidades?</summary><p>O formato principal é o workshop presencial in company, realizado no espaço da sua empresa. Quando necessário, há complementação online. Outros formatos podem ser avaliados na proposta.</p></details>
+      <details><summary>Qual a duração dos treinamentos?</summary><p>O workshop de referência dura de 1h30 a 2h. Programas com mais encontros ou maior carga horária são definidos conforme o escopo.</p></details>
+      <details><summary>Como funciona a contratação?</summary><p>Você envia a solicitação, recebemos o contexto e apresentamos uma proposta com escopo, formato e investimento. Com a proposta aprovada, seguimos para o briefing e o planejamento da entrega.</p></details>
+      <details><summary>Como funciona o briefing?</summary><p>É uma reunião com gestores e/ou RH para identificar necessidades e levantar expectativas. Quando aplicável, inclui questionário de anamnese e o alinhamento da infraestrutura do local.</p></details>
       <details><summary>Como é definido o investimento?</summary><p>Pelo número de participantes, pela carga horária, pelo formato e pelo escopo. Não há tabela fixa: cada proposta é personalizada.</p></details>
-      <details><summary>Quais áreas são atendidas?</summary><p>Desenvolvimento humano, liderança e gestão, educação financeira, desenvolvimento comercial e formação profissional para o mercado financeiro — além de capacitações relacionadas à temática da NR-1.</p></details>
-      <details><summary>Os conteúdos de educação financeira incluem recomendações de investimento?</summary><p>Não. Os conteúdos têm caráter educacional e não constituem recomendação de investimento.</p></details>
+      <details><summary>O que é o Neurovendas?</summary><p>Um treinamento comercial que ensina o profissional a compreender comportamentos, identificar necessidades e conduzir conversas melhores — da prospecção ao tratamento de objeções —, sem manipulação ou pressão.</p></details>
+      <details><summary>O Neurovendas IA é um teste psicológico?</summary><p>Não. É uma ferramenta de apoio comercial: indica preferências declaradas de comunicação e decisão a partir de 10 respostas. Não é diagnóstico psicológico, avaliação científica validada nem perfil de investidor.</p></details>
+      <details><summary>Os conteúdos de educação financeira incluem recomendações de investimento?</summary><p>Não. Os conteúdos têm caráter educacional e não constituem recomendação de investimento. Para assessoria de investimentos, conheça a <a href="https://quaestoradvisors.com.br/" target="_blank" rel="noopener">Quaestor Advisors</a>.</p></details>
     </div>
   </div>
 </section>
@@ -459,7 +548,7 @@
       <dl class="dados">
         <div><dt>Telefone</dt><dd><a href="tel:+5511912816811">(11) 91281-6811</a></dd></div>
         <div><dt>Endereço</dt><dd>Avenida Ibirapuera, 2332, 11º andar, Torre II<br>Indianópolis, São Paulo/SP · <span class="nw">CEP 04028-003</span></dd></div>
-        <div><dt>Grupo</dt><dd><a href="https://quaestoradvisors.com.br/" rel="noopener">Quaestor Advisors</a></dd></div>
+        <div><dt>Assessoria</dt><dd><a href="https://quaestoradvisors.com.br/" target="_blank" rel="noopener">Quaestor Advisors</a></dd></div>
       </dl>
     </div>
 
@@ -479,7 +568,7 @@
           <p class="erro" id="e-empresa" aria-live="polite"></p>
         </div>
         <div class="campo">
-          <label for="f-email">E-mail corporativo <abbr title="obrigatório">*</abbr></label>
+          <label for="f-email">E-mail <abbr title="obrigatório">*</abbr></label>
           <input id="f-email" name="email" type="email" autocomplete="email" required maxlength="160" inputmode="email">
           <p class="erro" id="e-email" aria-live="polite"></p>
         </div>
@@ -492,6 +581,8 @@
           <label for="f-solucao">Solução de interesse <abbr title="obrigatório">*</abbr></label>
           <select id="f-solucao" name="solucao" required>
             <option value="">Selecione</option>
+            <option value="neurovendas">Neurovendas (treinamento comercial)</option>
+            <option value="neurovendas-ia">Neurovendas IA (Quaestor Profile)</option>
             <option value="desenvolvimento-humano">Desenvolvimento Humano</option>
             <option value="lideranca-gestao">Liderança e Gestão</option>
             <option value="educacao-financeira">Educação Financeira</option>
@@ -543,24 +634,23 @@
 <footer class="rodape">
   <div class="wrap rodape__in">
     <div class="rodape__marca">
-      <a class="marca" href="/" aria-label="Quaestor Educação — início">
-        <img src="/assets/img/quaestor-wordmark-branco.png" width="611" height="70" alt="Quaestor" loading="lazy">
-        <span>Educação</span>
-      </a>
+      <a href="/" aria-label="Quaestor Educação — início"><img class="rodape__logo" src="/assets/img/quaestor-educacao-branco.png" width="420" height="82"alt="Quaestor Educação"></a>
       <p>Desenvolvimento humano, educação financeira e capacitação empresarial.</p>
+      <a class="btn btn--linha btn--sm" href="https://quaestoradvisors.com.br/" target="_blank" rel="noopener">Assessoria de investimentos <svg class="ext" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3h7v7M13 3 4 12"/></svg></a>
     </div>
     <nav aria-label="Rodapé">
       <ul>
-        <li><a href="#sobre">Sobre nós</a></li>
-        <li><a href="#solucoes">Soluções</a></li>
-        <li><a href="#empresas">Para empresas</a></li>
-        <li><a href="#como-funciona">Como funciona</a></li>
-        <li><a href="#perguntas">Perguntas frequentes</a></li>
-        <li><a href="#contato">Contato</a></li>
+        <li><a href="/#sobre">Sobre nós</a></li>
+        <li><a href="/#solucoes">Soluções</a></li>
+        <li><a href="/neurovendas/">Neurovendas</a></li>
+        <li><a href="/#empresas">Educação corporativa</a></li>
+        <li><a href="/#como-funciona">Como funciona</a></li>
+        <li><a href="/#perguntas">Perguntas frequentes</a></li>
+        <li><a href="/#contato">Contato</a></li>
       </ul>
     </nav>
     <div class="rodape__links">
-      <a href="https://quaestoradvisors.com.br/" rel="noopener">quaestoradvisors.com.br</a>
+      <a href="https://quaestoradvisors.com.br/" target="_blank" rel="noopener">quaestoradvisors.com.br</a>
       <a href="https://www.linkedin.com/company/quaestoradvisors/" rel="noopener" target="_blank">LinkedIn</a>
       <a href="https://www.instagram.com/quaestorinvestimentos/" rel="noopener" target="_blank">Instagram</a>
       <a href="/privacidade/">Aviso de Privacidade</a>

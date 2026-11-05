@@ -39,7 +39,7 @@
       document.addEventListener("keydown", function (e) {
         if (e.key === "Escape" && menu.classList.contains("aberto")) { fecharMenu(); botao.focus(); }
       });
-      window.addEventListener("resize", function () { if (window.innerWidth > 1080) fecharMenu(); });
+      window.addEventListener("resize", function () { if (window.innerWidth > 1240) fecharMenu(); });
     }
 
     /* ------------------------------------------------------------ link ativo no menu */
@@ -108,6 +108,12 @@
         if (select) { select.value = a.getAttribute("data-solucao"); limparErro(select); }
       });
     });
+
+    if (select) {
+      // pré-seleciona a solução vinda de outra página (/?solucao=neurovendas#contato)
+      var pedida = (new URLSearchParams(location.search).get("solucao") || "").replace(/[^a-z0-9-]/g, "");
+      if (pedida && select.querySelector('option[value="' + pedida + '"]')) select.value = pedida;
+    }
 
     var ano = document.querySelector("[data-ano]");
     if (ano) ano.textContent = String(new Date().getFullYear());
