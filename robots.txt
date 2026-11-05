@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://educacao.quaestoradvisors.com.br/sitemap.xml

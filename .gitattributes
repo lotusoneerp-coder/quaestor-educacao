@@ -1,0 +1,9 @@
+# Quebras de linha LF no repositório (o servidor é Linux); binários nunca são convertidos.
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.woff2 binary
+*.webp binary
