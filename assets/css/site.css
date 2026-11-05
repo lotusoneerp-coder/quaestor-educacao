@@ -405,7 +405,7 @@ h2 em { color: var(--menta-texto); }
 .pessoa { border-radius: var(--raio); background: var(--branco); border: 1px solid var(--linha-clara); overflow: hidden; transition: transform .45s var(--ease), box-shadow .45s var(--ease); }
 .pessoa:hover { transform: translateY(-4px); box-shadow: var(--sombra); }
 .pessoa__foto { position: relative; aspect-ratio: 4 / 5; background: linear-gradient(160deg, var(--petroleo), var(--petroleo-fundo)); display: grid; place-items: center; overflow: hidden; }
-.pessoa__foto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%; filter: saturate(.92); transition: transform .8s var(--ease), filter .5s; }
+.pessoa__foto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: var(--foco, 50% 30%); filter: saturate(.92); transition: transform .8s var(--ease), filter .5s; }
 .pessoa:hover .pessoa__foto img { transform: scale(1.035); filter: saturate(1); }
 .pessoa__foto span { font-family: var(--f-serif); font-size: clamp(3rem, 6vw, 4.6rem); color: var(--menta); letter-spacing: .02em; }
 .pessoa__foto::after { content: ""; position: absolute; inset: auto 0 0; height: 40%; background: linear-gradient(transparent, rgba(12, 12, 12, .28)); pointer-events: none; }
@@ -519,3 +519,8 @@ h2 em { color: var(--menta-texto); }
   .nv-blocos, .nv-grade, .ia-etapas, .perfis, .passos, .modelo--3 { grid-template-columns: 1fr; }
   .modelo--3 .modelo__inv { grid-column: auto; }
 }
+/* foco de cada foto da equipe (fotos originais quadradas, cortadas só na lateral) */
+[data-foto="pedro"] img { --foco: 50% 30%; }
+[data-foto="evandro-matias"] img { --foco: 56% 30%; }
+[data-foto="vitor-pereira"] img { --foco: 50% 30%; }
+[data-foto="lucas-neves"] img { --foco: 78% 30%; }
